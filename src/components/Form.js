@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
+import PropTypes from 'prop-types'; 
+
 import { getYearsDiference, getPriceByOrigin, getPriceByPlan } from "../helper";
 
 const FieldGroup = styled.div`
@@ -116,7 +118,7 @@ const Form = ({updateSummary, updateLoading}) => {
       updateLoading(false);
 
       updateSummary({
-        quote: price,
+        quote: Number(price),
         info
       });
     }, 3000);
@@ -175,5 +177,10 @@ const Form = ({updateSummary, updateLoading}) => {
     </form>
   );
 };
+
+Form.propTypes = {
+  updateSummary: PropTypes.func.isRequired,
+  updateLoading: PropTypes.func.isRequired
+}
 
 export default Form;

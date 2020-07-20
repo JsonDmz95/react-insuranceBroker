@@ -1,5 +1,6 @@
-import React, { Fragment } from "react";
+import React from "react";
 import styled from "@emotion/styled";
+import PropTypes from 'prop-types';
 
 const SummaryContainer = styled.div`
   padding: 1rem;
@@ -35,5 +36,9 @@ const Summary = ({ info }) => {
     </SummaryContainer>
   );
 };
+
+Summary.propTypes = {
+  info: PropTypes.object.isRequired
+}
 
 export default Summary;
