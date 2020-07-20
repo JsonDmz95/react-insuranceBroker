@@ -12,25 +12,28 @@ ul {
   padding: none;
   margin: none;
 }
-span.resultado {
+span.price {
   position: relative;
   width: 100%;
 }
-.resultado-enter {
+.total-container{
+  position: relative;
+}
+.price-enter {
   transition: .5s;
 }
-.resultado-enter.resultado-enter-active{
+.price-enter.price-enter-active{
   transform: translateY(0%);
 }
-.resultado-exit{
+.price-exit{
   transform: translateY(0);
   transition: .5s;
-  position : absolute;
+  /* position : absolute; */
   left: 0;
   bottom : 0;
   right: 0;
 }
-.resultado-exit-active{
+.price-exit-active{
   opacity: 0;
   transform: translateY(-10%);
 }
